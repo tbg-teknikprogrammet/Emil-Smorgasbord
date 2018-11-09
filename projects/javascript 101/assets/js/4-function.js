@@ -29,3 +29,52 @@ function kebabToSnake(str) {
 }
 
 console.log(kebabToSnake("hej-där-mannen"));
+
+function localScope () {
+    var showScope = 31;
+    console.log(showScope);
+}
+
+localScope ();
+console.log(showScope);
+
+var showScope = "IM a global";
+console.log(showScope);
+
+var showScopeY = 99;
+function localScopeY() {
+    showScopeY = 100;
+    console.log(showScopeY);
+}
+
+/* 
+
+Higher order functions
+
+*/
+
+function sing () {
+    console.log("I'm singing in the rain")
+    console.log("It's funny on a sunny day  ")
+}
+/*setInterval(sing, 2500);
+
+var anon = setInterval(function() {
+    console.log("I'm an anonymous function")
+}, 3000);*/
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("output").innerHTML = d.toLocaleTimeString();
+}
+
+myTimer();
+
+var myTime = setInterval(myTimer, 1000);
+
+document.getElementsByTagName("button")[0].addEventListener("mouseenter", function(){
+    clearInterval(myTime);
+});
+document.querySelector("button").addEventListener("mouseleave", function() {
+    myTime = setInterval(myTimer, 1000);
+});
