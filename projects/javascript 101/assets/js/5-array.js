@@ -163,14 +163,12 @@ printReverse([1,2,3,4,5,6]);
 // and returns true if all elements in the array are identical
 
 function isIdentical(array) {
-    for(var i = 0; i < array.length; i++) {
-        if (array[i] =! array[0]){
+    for(var i = 1; i < array.length; i++) {
+        if (array[i] != array[0]){
             return false;
         }
-        else {
-            return true;
-        }
     }
+    return true;
 }
 
 console.log(isIdentical([1,1,1,1,1])); // true
