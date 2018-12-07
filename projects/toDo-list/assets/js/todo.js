@@ -31,11 +31,11 @@ document.getElementsByTagName("button")[0].addEventListener("click", function(){
         }
         if (userInput == "remove"){
             var userRemove = Number(prompt("What is the index of the item you would like to remove?"));
+            console.log(list[Number(userRemove-1)] + " was removed from the list.");
             //splice deletes the item with index userremove-1 because the list is displayed
             //for the user one higher compared to the array.
             //splice removes one item at the given index
             list.splice((userRemove-1), 1); 
-            console.log(userRemove + " was removed from the list.");
         }
     }
 });
