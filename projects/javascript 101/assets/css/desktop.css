@@ -1,22 +1,66 @@
 @charset "utf-8";
+
 body {
-    background: #d2dae2;
-    display: flex;
+    background: #53525f;
+    color: #fff;
+    padding: 30px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
-#uppgift1 {
-    background: #4bcffa;
+.some-class {
+    color: orange;
+    letter-spacing: 2px;
+    transform: rotate(180deg);
+    font-style: italic;
 }
-#uppgift2 {
-    background: #3c40c6;
+.wierd-class {
+    color: #44ff66;
+    font-family: monospace;
+    animation: glitch 1s infinite;
 }
-#uppgift3 {
-    background: #575fcf;
-}
-#uppgift4 {
-    background: #4bcffa;
-}
-p {
-    color: white;
-    margin: 2px;
-    padding: 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-4px, 4px);
+    }
+    40% {
+        transform: translate(-4px, -4px);
+    }
+    60% {
+        transform: translate(4px, 4px);
+    }
+    80% {
+        transform: translate(4px, -4px);
+    }
+    100% {
+        transform: translate(0);
+    }
+
 }

@@ -1,0 +1,22 @@
+@charset "utf-8";
+body {
+    background: #d2dae2;
+    display: flex;
+}
+#uppgift1 {
+    background: #4bcffa;
+}
+#uppgift2 {
+    background: #3c40c6;
+}
+#uppgift3 {
+    background: #575fcf;
+}
+#uppgift4 {
+    background: #4bcffa;
+}
+p {
+    color: white;
+    margin: 2px;
+    padding: 10px;
+}
