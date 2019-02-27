@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score h1 {
+    color: teal;
+    font-family: Georgia;
+    font-size: 40px;
+    text-shadow: 1px 1px black;
+}
+.playto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: 14px;
+    opacity: 1;
+    position: absolute;
+    left: 682px;
+}

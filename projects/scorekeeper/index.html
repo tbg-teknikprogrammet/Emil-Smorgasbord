@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Scorekeeper</title>
-    <link rel="stylesheet" href="assets/css/todo.css">
+    <link rel="stylesheet" href="assets/css/scorekeeper.css">
 </head>
 <body>
-    <input type="number">
-    <button id="p1">Player 1</button>
-    <button id="p2">Player 2</button>
-    <button id="reset">Reset</button>
+    <section>
+        <section class="score">
+        <h1> <span id="p1Score">0</span> - <span id="p2Score">0</span></h1>
+        </section>
+        <section class="playto">
+        <p>Playing to: <span id="playingTo">5</span></p>
+        <input type="number" min ="1" max="7">
+        </section>
+        <br> <br>
+        <button id="p1">Player 1</button>
+        <button id="p2">Player 2</button>
+        <button id="reset">Reset</button>
+        <h1 id="winner"></h1>
+    </section>
 <script src="assets/js/scorekeeper.js"></script>
 </body>
 </html>
