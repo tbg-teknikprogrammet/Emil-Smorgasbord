@@ -10,7 +10,7 @@ var winnerText = document.querySelector("#winner");
 var scoreLimit = 5;
 
 //Change and show playing to value
-inputNumber.addEventListener("click", function(){
+inputNumber.addEventListener("input", function(){
     playingTo.innerHTML = this.value;
     scoreLimit = Number(this.value);
 })
