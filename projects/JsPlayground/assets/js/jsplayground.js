@@ -113,3 +113,44 @@ prevButton.addEventListener("click", function(){
     }
     document.getElementById("imgnumb").innerHTML = imageNumber;
 })
+
+
+/***************************
+ 
+        Drop-Down
+
+****************************/
+
+var dropDownBtn = document.getElementById("dropDownBtn");
+var items = document.querySelectorAll("#dropDown li");
+var list = document.querySelector("ul");
+
+dropDownBtn.addEventListener("click", function(){
+    for(i=0; i<3; i++) {
+        items[i].classList.toggle("visible");
+    }
+    list.classList.toggle("collapsed");
+})
+
+/***************************
+ 
+        Overlay
+
+****************************/
+
+var showAdBtn = document.getElementById("showAd");
+var adBox = document.getElementById("bigAd");
+
+showAdBtn.addEventListener("click", function(){
+    adBox.classList.toggle("visible");
+})
+
+/***************************
+ 
+        S5
+
+****************************/
+var s5 = document.getElementsByClassName("s5")[0];
+s5.addEventListener("mouseover", function() {
+    s5.setAttribute("style", "background-color: red")
+})
