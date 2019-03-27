@@ -139,18 +139,41 @@ dropDownBtn.addEventListener("click", function(){
 ****************************/
 
 var showAdBtn = document.getElementById("showAd");
-var adBox = document.getElementById("bigAd");
+var adBox = document.getElementsByClassName("bigAd")[0];
+var overlay = document.getElementsByClassName("overlay")[0];
 
 showAdBtn.addEventListener("click", function(){
-    adBox.classList.toggle("visible");
+    adBox.classList.add("popup");
+    overlay.classList.add("dark");
 })
 
-/***************************
+overlay.addEventListener("click", function(){
+    adBox.classList.remove("popup");
+    overlay.classList.remove("dark");
+})
+window.onkeyup = function (event) {
+    if (event.keyCode == 27) {
+        adBox.classList.remove("popup");
+        overlay.classList.remove("dark");
+    }
+   }
+   /***************************
  
-        S5
+        Darkmodeswitch
 
 ****************************/
-var s5 = document.getElementsByClassName("s5")[0];
-s5.addEventListener("mouseover", function() {
-    s5.setAttribute("style", "background-color: red")
+
+var dmSwitch = document.getElementsByClassName("btnBkg")[0];
+var movingDot = document.getElementsByClassName("roundswitch") [0];
+var sections = document.querySelectorAll("section");
+
+dmSwitch.addEventListener("click", function(){
+    movingDot.classList.toggle("right");
+    dmSwitch.classList.toggle("darkerBackground");
+    sections[0].classList.toggle("darkerBackground2");
+    sections[10].classList.toggle("darkerBackground2");
+    sections[9].classList.toggle("darkerBackground2");
+    // for(var i=0; i<sections.length; i++) {
+    //     sections[i].classList.toggle("darkerBackground2");
+    // }
 })

@@ -8,7 +8,20 @@ body {
     background: #5C258D;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    margin: 0px;
+}
+.overlay {
+    background: black;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.dark {
+    visibility: visible;
+    opacity: 0.7;
 }
 .s1 {
     background: #95afc0;
@@ -83,7 +96,8 @@ img {
 }
 #next:hover,
 #prev:hover,
-#dropDownBtn:hover {
+#dropDownBtn,
+#showAd:hover {
     cursor: pointer;
 }
 .s3 {
@@ -126,19 +140,56 @@ ul li {
     padding-right: 20px;
     padding-left: 20px;
     border-radius: 5px;
+    position: absolute;
 }
-#bigAd {
-    background: red;
+.bigAd {
+    background: #4389A2;
+    border: 4px solid rgb(12, 57, 73);
     padding: 100px;
-    display: none;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s linear;
+}
+.popup {
+    visibility: visible;
+    opacity: 1;
 }
 .s5 {
-    width: 100%;
-    height: 250px;
     background: #95afc0;
-    transition: all .3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.btnBkg {
+    background: gray;
+    width: 34px;
+    height: 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.roundswitch{
+    background: white;
+    height: 16px;
+    width: 16px;
+    border-radius: 9px;
+    position: relative;
+    left: 2px;
+    top: 2px;
+    transition: all 0.2s linear;
+}
+.right {
+    left: 16px;
+}
+.darkerBackground {
+    background:black;
+}
+.darkerBackground2 {
+    background: #394349;
+}
 .s6 {
     background: #95afc0;
 }
