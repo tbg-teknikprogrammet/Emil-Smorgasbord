@@ -1,4 +1,5 @@
 body {
+    padding: 20px;
     display: grid;
     grid-gap: 20px;
     grid-template-rows: 250px 250px;
@@ -13,8 +14,10 @@ body {
 .overlay {
     background: black;
     position: absolute;
+    left: -20px;
+    top: -20px;
     width: 100vw;
-    height: 100vh;
+    height: 103vh;
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s linear;
@@ -187,9 +190,64 @@ ul li {
 .darkerBackground {
     background:black;
 }
+.s6 {
+    background: #95afc0;
+    padding: 10px;
+}
 .darkerBackground2 {
     background: #394349;
 }
-.s6 {
-    background: #95afc0;
+.lightertext {
+    color: rgb(178, 191, 199);
+}
+section {
+    transition: all 0.2s linear;
+}
+.logcounter {
+    display: flex
+}
+.maingame {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+#beaverimg {
+    width: 200px;
+}
+#beaverimg:hover {
+    cursor: url('../images/boxing_glove.png'), auto;
+}
+#beaverimg:active {
+    transform: rotate(5deg) scale(0.96);
+}
+#logimg {
+    width: 30px;
+    height: 20px;
+}
+.flyinglog {
+    top: 40px;
+    opacity: 0;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    transition: all 0.1s ease-out;
+}
+.highlog {
+    opacity: 1;
+    top: 10px;
+}
+.beaverclicker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop {
+    background: #fff;
+}
+.shop li {
+    display: flex;
+}
+li img {
+    height: 30px;
 }

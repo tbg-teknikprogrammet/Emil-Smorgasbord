@@ -171,9 +171,41 @@ dmSwitch.addEventListener("click", function(){
     movingDot.classList.toggle("right");
     dmSwitch.classList.toggle("darkerBackground");
     sections[0].classList.toggle("darkerBackground2");
-    sections[10].classList.toggle("darkerBackground2");
     sections[9].classList.toggle("darkerBackground2");
-    // for(var i=0; i<sections.length; i++) {
-    //     sections[i].classList.toggle("darkerBackground2");
-    // }
+    sections[10].classList.toggle("darkerBackground2");
+    sections[12].classList.toggle("darkerBackground2");
+    sections[16].classList.toggle("darkerBackground2");
+    sections[2].classList.toggle("lightertext");
+    sections[11].classList.toggle("lightertext");
+})
+
+/***************************
+ 
+        Beaver Clicker Game
+
+****************************/
+
+var clickAmount = 0;
+var clickAmountDisplay = document.getElementById("clickamountdisplay");
+var beaver = document.getElementById("beaverimg");
+var flyingLog = document.getElementsByClassName("flyinglog");
+
+beaver.addEventListener("click", function(){
+    clickAmount++;
+    clickAmountDisplay.innerHTML = clickAmount;
+    if (clickAmount > 5) {
+        beaver.src = "assets/images/Beaver2.png";
+    }
+    if (clickAmount > 10) {
+        beaver.src = "assets/images/Beaver3.png";
+    }
+    if (clickAmount > 15) {
+        beaver.src = "assets/images/Beaver4.png";
+    }
+})
+beaver.addEventListener("mousedown", function(){
+    flyingLog[0].classList.add("highlog");
+})
+beaver.addEventListener("mouseup", function(){
+    flyingLog[0].classList.remove("highlog");
 })
