@@ -210,12 +210,16 @@ section {
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
+    height: 150px;
 }
 #beaverimg {
     width: 200px;
 }
 #beaverimg:hover {
     cursor: url('../images/boxing_glove.png'), auto;
+}
+#helmet:hover {
+    cursor: pointer;
 }
 #beaverimg:active {
     transform: rotate(5deg) scale(0.96);
@@ -245,9 +249,17 @@ section {
 .shop {
     background: #fff;
 }
+.shop ul {
+    margin: 4px;
+}
 .shop li {
     display: flex;
 }
+.shop li p{
+    font-size: 10px;
+    margin: 0;
+}
 li img {
-    height: 30px;
+    height: 20px;
+    margin-left: 5px;
 }
