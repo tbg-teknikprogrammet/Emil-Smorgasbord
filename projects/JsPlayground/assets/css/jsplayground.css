@@ -49,7 +49,7 @@ input {
     width: 14px;
     opacity: 1;
     position: absolute;
-    left: 258px;
+    left: 261px;
 }   
 .s2 {
     background: #95afc0;
@@ -100,7 +100,10 @@ img {
 #next:hover,
 #prev:hover,
 #dropDownBtn,
-#showAd:hover {
+#showAd:hover,
+#helmet:hover,
+#axe:hover,
+#energy:hover {
     cursor: pointer;
 }
 .s3 {
@@ -195,7 +198,7 @@ ul li {
     padding: 10px;
 }
 .darkerBackground2 {
-    background: #394349;
+    background: #394349 !important;
 }
 .lightertext {
     color: rgb(178, 191, 199);
@@ -217,9 +220,6 @@ section {
 }
 #beaverimg:hover {
     cursor: url('../images/boxing_glove.png'), auto;
-}
-#helmet:hover {
-    cursor: pointer;
 }
 #beaverimg:active {
     transform: rotate(5deg) scale(0.96);
@@ -254,12 +254,13 @@ section {
 }
 .shop li {
     display: flex;
+    justify-content: space-between;
 }
 .shop li p{
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
 }
 li img {
-    height: 20px;
+    height: 30px;
     margin-left: 5px;
 }

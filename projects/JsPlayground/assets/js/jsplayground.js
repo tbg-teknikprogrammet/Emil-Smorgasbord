@@ -177,6 +177,7 @@ dmSwitch.addEventListener("click", function(){
     sections[16].classList.toggle("darkerBackground2");
     sections[2].classList.toggle("lightertext");
     sections[11].classList.toggle("lightertext");
+    sections[20].classList.toggle("darkerBackground2");
 })
 
 /***************************
@@ -192,6 +193,7 @@ var beaver = document.getElementById("beaverimg");
 var flyingLog = document.getElementsByClassName("flyinglog");
 var helmet = document.getElementById("helmet");
 var axe = document.getElementById("axe");
+var energydrink = document.getElementById("energy");
 var helmetOn = false;
 var gameStarted = false;
 var gameEnded = false;
@@ -242,12 +244,14 @@ if (gameEnded == false) {
             }
         }
         // The beaver is only using an axe
-        else if(axeOn==true && helmetOn == false){
+        else if(axeOn==true && helmetOn == false && gameEnded == false){
             clickAmount++;
             beaver.src = "assets/images/Beaveraxe.png";
             if(clickAmount>15){
                 dead = true;
+                clickAmount = 0;
                 beaver.src = "assets/images/deadbeaver.png";
+                alert("You've killed the beaver. How cruel!")
                 gameEnded = true;
             }
         }
@@ -336,6 +340,15 @@ if (gameEnded == false) {
         }
         else if(clickAmount<75 && gameStarted == true){
             alert("You need at least 75 logs to buy an axe");
+        }
+    })
+    //Function when the energydrink icon is clicked
+    energydrink.addEventListener("click", function(){
+        if(clickAmount>1000) {
+        beaver.src = "assets/images/Pumpedbeaver.png";
+        }
+        else {
+            alert("You need at least 1000 logs to buy energy drink");
         }
     })
 }
