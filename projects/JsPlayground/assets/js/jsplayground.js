@@ -208,10 +208,10 @@ if (gameEnded == false) {
             if (clickAmount > 10 && clickAmount < 21) {
                 beaver.src = "assets/images/Beaver2.png";
             }
-            else if (clickAmount > 20 && clickAmount < 31) {
+            if (clickAmount > 20 && clickAmount < 31) {
                 beaver.src = "assets/images/Beaver3.png";
             }
-            else if (clickAmount > 30 && clickAmount < 91) {
+            if (clickAmount > 30 && clickAmount < 91) {
                 beaver.src == "assets/images/Beaver4.png";
             }
             if (clickAmount == 50 && helmetOn==false) {
@@ -245,14 +245,10 @@ if (gameEnded == false) {
         else if(axeOn==true && helmetOn == false){
             clickAmount++;
             beaver.src = "assets/images/Beaveraxe.png";
-            if (clickAmount > 10) {
-                beaver.src = "assets/images/Beaveraxe2.png";
-            }
-            if (clickAmount > 20) {
-                beaver.src = "assets/images/Beaveraxe3.png";
-            }
-            if (clickAmount > 30) {
-                beaver.src = "assets/images/Beaveraxe4.png";
+            if(clickAmount>15){
+                dead = true;
+                beaver.src = "assets/images/deadbeaver.png";
+                gameEnded = true;
             }
         }
         // The beaver uses an axe and is wearing a helmet
@@ -318,7 +314,7 @@ if (gameEnded == false) {
     axe.addEventListener("click", function(){
         if(clickAmount>74 && helmetOn == true) {
             axeOn = true;
-            clickAmount = clickAmount-50;
+            clickAmount = clickAmount-75;
             clickAmountDisplay.innerHTML = clickAmount;
             beaver.src = "assets/images/Beaverhelmetaxe.png";
             if (clickAmount > 40) {
@@ -336,15 +332,7 @@ if (gameEnded == false) {
             clickAmount = clickAmount-75;
             clickAmountDisplay.innerHTML = clickAmount;
             beaver.src = "assets/images/Beaveraxe.png";
-            if (clickAmount > 10) {
-                beaver.src = "assets/images/Beaveraxe2.png";
-            }
-            if (clickAmount > 20) {
-                beaver.src = "assets/images/Beaveraxe3.png";
-            }
-            if (clickAmount > 30) {
-                beaver.src = "assets/images/Beaveraxe4.png";
-            }
+            alert("The beaver needed a helmet, not an axe.")
         }
         else if(clickAmount<75 && gameStarted == true){
             alert("You need at least 75 logs to buy an axe");
